@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run ShellCheck
-      uses: ludeeus/action-shellcheck@master
+      uses: sumup/action-shellcheck@master
 ```
 
 ## ShellCheck options
@@ -36,7 +36,7 @@ example:
 ```yaml
     ...
     - name: Run ShellCheck
-      uses: ludeeus/action-shellcheck@master
+      uses: sumup/action-shellcheck@master
       env:
         SHELLCHECK_OPTS: -e SC2059 -e SC2034 -e SC1090
 ```
@@ -57,7 +57,7 @@ example:
 ```yaml
     ...
     - name: Run ShellCheck
-      uses: ludeeus/action-shellcheck@master
+      uses: sumup/action-shellcheck@master
       with:
         ignore: ignoreme ignoremetoo
 ```
@@ -73,7 +73,7 @@ example:
 ```yaml
     ...
     - name: Run ShellCheck
-      uses: ludeeus/action-shellcheck@master
+      uses: sumup/action-shellcheck@master
       with:
         severity: error
 ```
@@ -86,7 +86,7 @@ all files at once:
 ```yaml
     ...
     - name: Run ShellCheck
-      uses: ludeeus/action-shellcheck@master
+      uses: sumup/action-shellcheck@master
       with:
         check_together: 'yes'
 ```
@@ -102,7 +102,7 @@ one of them, you can use the following configuration:
 ```yaml
    ...
    - name: Run ShellCheck
-     uses: ludeeus/action-shellcheck@master
+     uses: sumup/action-shellcheck@master
      with:
        scandir: './scripts'
 ```
@@ -114,7 +114,7 @@ If you need to scan for unusual files, you can use the `additional_files` key.
 ```yaml
    ...
    - name: Run ShellCheck
-     uses: ludeeus/action-shellcheck@master
+     uses: sumup/action-shellcheck@master
      with:
        additional_files: 'run finish'
 ```
@@ -127,7 +127,7 @@ by setting `disable_matcher` to `true`.
 ```yaml
    ...
    - name: Run ShellCheck
-     uses: ludeeus/action-shellcheck@master
+     uses: sumup/action-shellcheck@master
      with:
        disable_matcher: true
 ```
